@@ -58,6 +58,21 @@ spec:
           limits:
             cpu: 200m
             memory: 128Mi
+      - name: agent
+        image: gcr.io/shadowgraph/github.com/pkukkapalli/shadowgraph-agent:latest
+        env:
+        - name: NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: POD_IP_ADDR
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
 ---
 apiVersion: v1
 kind: Service
@@ -127,6 +142,21 @@ spec:
             limits:
               cpu: 200m
               memory: 128Mi
+        - name: agent
+          image: gcr.io/shadowgraph/github.com/pkukkapalli/shadowgraph-agent:latest
+          env:
+          - name: NODE_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: spec.nodeName
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
+          - name: POD_IP_ADDR
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP
 ---
 apiVersion: v1
 kind: Service
@@ -187,6 +217,21 @@ spec:
           # limits:
           #   cpu: 200m
           #   memory: 450Mi
+      - name: agent
+        image: gcr.io/shadowgraph/github.com/pkukkapalli/shadowgraph-agent:latest
+        env:
+        - name: NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: POD_IP_ADDR
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
 ---
 apiVersion: v1
 kind: Service
@@ -274,6 +319,21 @@ spec:
             limits:
               cpu: 200m
               memory: 128Mi
+        - name: agent
+          image: gcr.io/shadowgraph/github.com/pkukkapalli/shadowgraph-agent:latest
+          env:
+          - name: NODE_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: spec.nodeName
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
+          - name: POD_IP_ADDR
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP
 ---
 apiVersion: v1
 kind: Service
@@ -343,6 +403,21 @@ spec:
           limits:
             cpu: 200m
             memory: 128Mi
+      - name: agent
+        image: gcr.io/shadowgraph/github.com/pkukkapalli/shadowgraph-agent:latest
+        env:
+        - name: NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: POD_IP_ADDR
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
 ---
 apiVersion: v1
 kind: Service
@@ -401,6 +476,21 @@ spec:
           limits:
             cpu: 200m
             memory: 128Mi
+      - name: agent
+        image: gcr.io/shadowgraph/github.com/pkukkapalli/shadowgraph-agent:latest
+        env:
+        - name: NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: POD_IP_ADDR
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
 ---
 apiVersion: v1
 kind: Service
@@ -454,6 +544,21 @@ spec:
           periodSeconds: 10
           exec:
             command: ["/bin/grpc_health_probe", "-addr=:7070", "-rpc-timeout=5s"]
+      - name: agent
+        image: gcr.io/shadowgraph/github.com/pkukkapalli/shadowgraph-agent:latest
+        env:
+        - name: NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: POD_IP_ADDR
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
 ---
 apiVersion: v1
 kind: Service
@@ -518,6 +623,21 @@ spec:
           # limits:
           #   cpu: 500m
           #   memory: 512Mi
+      - name: agent
+        image: gcr.io/shadowgraph/github.com/pkukkapalli/shadowgraph-agent:latest
+        env:
+        - name: NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: POD_IP_ADDR
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -562,6 +682,21 @@ spec:
           limits:
             cpu: 200m
             memory: 128Mi
+      - name: agent
+        image: gcr.io/shadowgraph/github.com/pkukkapalli/shadowgraph-agent:latest
+        env:
+        - name: NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: POD_IP_ADDR
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
 ---
 apiVersion: v1
 kind: Service
@@ -620,6 +755,21 @@ spec:
           limits:
             cpu: 200m
             memory: 128Mi
+      - name: agent
+        image: gcr.io/shadowgraph/github.com/pkukkapalli/shadowgraph-agent:latest
+        env:
+        - name: NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: POD_IP_ADDR
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
 ---
 apiVersion: v1
 kind: Service
@@ -670,6 +820,21 @@ spec:
           # requests:
           #   cpu: 70m
           #   memory: 200Mi
+      - name: agent
+        image: gcr.io/shadowgraph/github.com/pkukkapalli/shadowgraph-agent:latest
+        env:
+        - name: NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: POD_IP_ADDR
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
       volumes:
       - name: redis-data
         emptyDir: {}
@@ -733,6 +898,21 @@ spec:
           periodSeconds: 15
           exec:
             command: ["/bin/grpc_health_probe", "-addr=:9555"]
+      - name: agent
+        image: gcr.io/shadowgraph/github.com/pkukkapalli/shadowgraph-agent:latest
+        env:
+        - name: NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: POD_IP_ADDR
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
 ---
 apiVersion: v1
 kind: Service
